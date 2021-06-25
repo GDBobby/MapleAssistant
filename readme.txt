@@ -3,7 +3,7 @@ v1.01 release2
 v1.02 had to fix paladin
 
 Notes :
-when a dev changes booster from +2 to +3, chain lightning speed is 630, paralyze&angelray is 690
+when a dev changes booster from +2 to +3, chain lightning speed is 630, paralyze is 690
 
 
 Todo : need to add in weapon types
