@@ -1,0 +1,107 @@
+Bowmaster
+90
+Hurricane Inferno
+100 160
+1 1
+55
+100
+100 100 100 100
+
+Marksman
+90
+Strafe Snipe Pierce
+100 99999 850
+4 1 1
+55
+100
+100 100 100 100
+
+DarkKnight
+80
+Crusher Fury
+170 260
+3 1
+0
+0
+200 100 100 100
+
+Hero
+60
+Brandish NULL
+260 NULL
+2 NULL
+0
+0
+190 100 100 100
+
+Paladin
+60
+Blast ACB
+550 350
+1 1
+0
+0
+140 125 120 105
+
+IceLightning
+60
+CL Blizzard
+210 620
+1 1
+0
+0 
+140 100 100 100
+
+FirePoison
+60
+Paralyze MeteorShower
+240 620
+1 1
+0
+0
+140 100 100 100
+
+Bishop
+60
+AngelRay Genesis
+240 670
+1 1
+0
+0
+100 100 100 100
+
+Shadower
+60
+Assassinate BoomerangStep BoT
+750 500 250
+3 2 1
+0
+0
+100 100 100 100
+
+NightLord
+60
+TripleThrow Avenger
+150 180
+3 1
+50
+100
+150 100 100 100
+
+Buccaneer
+60
+Demolition Barrage DragonStrike Snatch
+400 230 810 600
+5 10 1 1
+0
+0
+100 100 100 100
+
+Corsair
+60
+Cannon RapidFire Torpedo
+380 200 780
+4 1 1
+0
+0
+120 100 100 100
