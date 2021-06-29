@@ -1,7 +1,3 @@
-v1 release
-v1.01 release2
-v1.02 had to fix paladin
-
 v1.1 - code rearranged/cleaned
 	corsair custom mix added
 	dps for different skills displayed concurrently
@@ -10,6 +6,10 @@ v1.1 - code rearranged/cleaned
 	no longer embarrassed by messy code, source released. now just embarrassed by poor coding practice
 	
 	
+
+Notes :
+when a dev changes booster from +2 to +3, chain lightning speed is 630, paralyze is 690
+
 
 Notes :
 -when a dev changes booster from +2 to +3, chain lightning speed is 630, paralyze&angelray is 690
