@@ -7,7 +7,7 @@ v1.1 - code rearranged/cleaned
 	dps for different skills displayed concurrently
 	clearer usage for elestaff with mages
 	small bucc formula error fixed (no longer using lines to account for barrage bonus)
-	no longer embarrassed by messy code, source released. now just embarrassed by poor coding practice
+	
 	
 	
 
@@ -114,8 +114,9 @@ job info layout
 
 Name
 mastery
-Attack1 percent1 lines1
-Attack2 percent 2 lines2
+Attack1 Attack2(skill names) --- (if you add/remove skills, update the skill structs)
+percent1 percent2
+lines1 lines2
 critchance (before SE)
 critdmg (before SE, default is 0)
 other modifiers default value is 1 (elemental charges, shadow partner, combo, berserk etc)
