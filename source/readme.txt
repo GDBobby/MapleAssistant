@@ -1,62 +1,59 @@
 v1 release
 v1.01 release2
-v1.02 had to fix paladin
+v1.02 paladin fix
 
 v1.1 - code rearranged/cleaned
 	corsair custom mix added
 	dps for different skills displayed concurrently
 	clearer usage for elestaff with mages
 	small bucc formula error fixed (no longer using lines to account for barrage bonus)
+	no longer embarrassed by messy code, source released. now just embarrassed by poor coding practice
 	
+v2 SFML port
+	jobinfo.txt rearranged
+		weapon info added in to jobinfo
+		mob count added to skills
+		weapon stat multipliers hardcoded in, ive never seen a pserver change them
+	cygnus knights added in
+	made it much easier to add in more skills, you no longer need to change code and can stay in the jobinfo.txt
+	classes can be added as well, no change in code required
+		just make sure to follow the format
+	while not desireable, ele staff multipliers have been hardcoded in the getMultMagic function
 	
 	
 
 Notes :
 -when a dev changes booster from +2 to +3, chain lightning speed is 630, paralyze&angelray is 690
--Pierce is also Piercing Arrow?
 
 ~~~~~~~~
 Todo : 
 	-want to fix decimals in file reading		
 	-need more info on combo attacks
-	
-	v2
 	-want to add support for buff activation times, and taking that from DPS
 	-want summon support
 	-want multi-target support
 	-want to add support for the damage cap
-	
-	v3
 	-want head-to-head charts for all classes, including at different target numbers
-	-want a GUI for setting gear stats
-	
-	v4
+	-want a GUI for setting gear stats, including ammo and shields
 	-want support for accuracy calculations
 	-want to add support for finding exp per hour, map density
-	-maybe a GUI for setting mob distance and using attack range to pull DPS from real scenarios
-	
-	-need a workaround for using std::strings to initialize list boxes, benched for now
+	-maybe a GUI for setting mob distance and using attack range to get real scenario DPS comparisons
+	-strafesnipe combo needs to be adjusted, its using decimals. You can't shoot 5.5 strafes between each snipe
+	-might want to reimplement custom mix for corsair
 ~~~~~~~~
 	
 
 ~~~~~~~~~~~~~~
-Things that need testing :
--actual delay for ass/bstep, barrage + demo, barrage + dragonstrike, dragonstrike + snatch, its currently jerry rigged
--charge advantage/disadvantage for paladin
-	according to ayumilove its like this at max level
-		holy 			1.5 ~ .5
-		(sword)ice 		1.5 ~ .5
-		(sword)fire		1.5 ~ .5
-		(sword)lightn	1.5 ~ .5
-		(mace)inferno 	1.25 ~ .75
-		(mace)blizzard	1.25 ~ .75
-		(mace)lightning/divine isn't mentioned, but maybe its also 1.25,.75
-	i dont have any personal experience with maces being so weak, but maybe i missed it	
-	
--pierce testing, need to know full charged attack time
-	ayumilove says it takes 1 second to charge, is it 1sec + attack speed per attack? or can it start recharging without delay
-	for now im rolling with no delay on recharge, 1 fully charged piercing arrow per second
--according to ayumilove darksight delay is 240ms, but in my experience its 60. Using 240 for now, but want further testing	
+Things that need testing :	
+how bstep and bot interact, currently im assuming the first bot after bstep is a free cast, and finishes before bstep does
+attack speed on bucc skills, currently using vanilla speeds
+attack speed on Dark Impale (DrK), currently using crusher speeds
+attack speed on all Cygnus skills, some unimplemented, nightwalker is using Night Lord speeds, using Vampire vanilla
+ThunderBreaker combos, attack order etc
+Heaven's hammer attack speed
+	I believe it's close to 2520 at some speed, then Dream has an adjustment which makes it 450ms faster, close to 2070ms
+Hero and Dawn Warrior Advanced Combo multiplier, currently assuming its 2.5 and 1.9 respectively
+I doubt it does, but need confirmation if Cygnus final attack adds to 3rd or 4th job skills
 	
 ~~~~~~~~~~~~~~
 
@@ -64,49 +61,24 @@ Things that need testing :
 @~@~@~@~@~@~@~@~@
 class IDs
 
-bowmaster 	0
-marksman 	1
-darkknight	2
-hero		3
-paladin		4
-i/l			5
-f/p			6
-bishop		7
-shadower	8
-nightlord	9
-bucc		10
-corsair		11
+bowmaster		0
+marksman		1
+windarcher		2
+darkknight		3
+hero			4
+paladin			5
+dawnwarrior		6
+icelightning	7
+firepoison		8
+bishop			9
+blazewizard		10
+shadower		11
+nightlord		12
+nightwalker		13
+buccaneer		14
+corsair			15
+thunderbreaker	16
 @~@~@~@~@~@~@~@~@
-
-
-@~@~@~@~@~@~@~@~@
-weapon IDs
-
-0 bow
-1 xbow
-2 spear
-3 1hsword
-4 2hsword
-5 1ham
-6 2ham (2h axe/mace)
-7 elestaff
-8 dagger
-9 claw
-10 knuckle
-11 gun
-@~@~@~@~@~@~@~@~@
-
-
-~@~@~@~@~@~@~@~@~@~
-weapon info layout
-
-weapon multiplier (multipled by 10 cause no decimal)
-
-(skill 1, speed 2) (skill 2, speed 2)
-...
-(singletarget skill 1, speed 6) (st2, sp6) (mt1, sp6) (multitarget 2, speed 6)
-(if applicable, the next row is the spamming speed, i.e. boomerang step)
-~@~@~@~@~@~@~@~@~@~
 
 
 ~@~@~@~@~@~@~@~@~@~
@@ -114,13 +86,24 @@ job info layout
 
 Name
 mastery
-Attack1 Attack2(skill names) --- (if you add/remove skills, update the skill structs)
-percent1 percent2
-lines1 lines2
 critchance (before SE)
 critdmg (before SE, default is 0)
-other modifiers default value is 1 (elemental charges, shadow partner, combo, berserk etc)
-	include elemental staff and elemental amplification
+other modifiers default value is 100 (elemental charges, shadow partner, combo, berserk etc)
 	Paladin is ordered Holy Fire Lightning Ice
-	currently multiplied by 100 to prevent decimals, default is 100
+	currently multiplied by 100 to prevent decimals, meaning the default is 100
+
+Attack1 percent1 lines1 mobcount1
+speed[0][0], ....speed[0][4]...spamming speed = speed[0][5] if present
+	this is looped until endof or combo is reading
+combo
+	loops reading a skill names until endof or combo is read
+endof breaks all reading loops, ending the class reading
+
+
 ~@~@~@~@~@~@~@~@~@~
+
+jobinfo.txt notes
+	assassinate needs to be the first skill for Shadower, or darksight delay wont be implemented properly
+		if assassinate is the first skill in a combo, darksight delay will be applied
+		if its the second skill in a combo, darksight delay is not applied
+	unfortunately, other class combos are a little more complicated and are hand coded. Only shad supports additional combos	

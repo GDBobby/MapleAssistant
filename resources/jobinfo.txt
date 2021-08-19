@@ -1,99 +1,197 @@
 Bowmaster
 90
-Hurricane 100 1
-Inferno 160 1
-55
-100
+50 110
 100 100 100 100
+Hurricane 230 1 1
+120 120 120 120 120
+Inferno 160 1 6
+600 660 720 750 810
+endof
 
 Marksman
 90
-Strafe 100 4
-Snipe 99999 1
-Pierce 850 1
-55
-100
+45 110
 100 100 100 100
+Strafe 160 6 1
+630 690 720 780 870
+Snipe 99999 1 1
+630 690 720 780 870
+Pierce 750 1 6
+630 690 720 780 870
+combo
+Strafe Snipe
+endof
+
+WindArcher
+80
+45 100
+120 100 100 100
+SongOfHeaven 120 6 1
+630 690 720 780 870
+SpiralingVortex 300 2 6
+630 690 720 780 870
+endof
 
 DarkKnight
 80
-Crusher 170 3
-Fury 260 1
-0
-0
-200 100 100 100
+0 0
+220 100 100 100
+DarkImpale 250 4 1
+810 870 930 990 1050
+Crusher 200 3 4
+810 870 930 990 1050
+Fury 260 1 4
+600 660 720 750 810
+endof
 
 Hero
 60
-Brandish 260 2
-0
-0
-190 100 100 100
+0 0
+250 100 100 100
+Brandish 425 2 4
+630 690 750 810 840
+endof
 
 Paladin
 60
-Blast 550 1
-AdvancedChargeBlow 350 1
-0
-0
-140 125 120 105
+0 0
+150 150 150 140
+Blast 350 3 1
+630 690 750 810 840
+AdvancedChargeBlow 450 1 6
+600 660 720 750 810
+endof
+
+DawnWarrior
+60
+0 0
+190 120 100 100
+IntrepidSlash 310 3 4
+630 690 750 810 840
+MoonShadow 300 1 6
+600 660 720 750 810
+endof
 
 IceLightning
 60
-ChainLightning 210 1
-Blizzard 620 1
-0
-0 
-140 100 100 100
+0 0 
+150 100 100 100
+ChainLightning 290 2 6
+690
+Blizzard 620 1 15
+3060
+endof
 
 FirePoison
 60
-Paralyze 240 1
-MeteorShower 620 1
-0
-0
-140 100 100 100
+0 0
+150 100 100 100
+Paralyze 330 2 4
+720
+MeteorShower 620 1 15
+3060
+endof
 
 Bishop
 60
-AngelRay 240 1
-Genesis 670 1
-0
-0
+0 0
 100 100 100 100
+AngelRay 520 3 1
+720
+Genesis 670 1 15
+2700
+endof
+
+BlazeWizard
+60
+0 0
+100 100 100 100
+LordHaveMercy 100 1 8
+1000
+NotYetImplemented 100 1 15
+1000
+endof
 
 Shadower
 60
-Assassinate 750 3
-BoomerangStep 500 2
-BoT 250 1
-0
-0
+0 0
 100 100 100 100
+Assassinate 1200 3 1
+1380 1500 1620 1710
+Ass4thHit 3000 1 1
+390 390 390 390 390
+BoomerangStep 650 2 4
+690 750 810 870 870 975
+BandOfThieves 250 1 6
+600 660 720 750
+combo
+Assassinate Ass4thHit
+combo
+BoomerangStep Assassinate Ass4thHit
+combo
+BoomerangStep Assassinate
+combo
+BoomerangStep BandOfThieves
+endof
 
 NightLord
 60
-TripleThrow 150 3
-Avenger 180 1
-50
-100
-150 100 100 100
+60 110
+180 100 100 100
+TripleThrow 210 3 1
+600 660 720 750 810
+Avenger 250 1 6
+630 690 750 810 840
+endof
+
+NightWalker
+60
+60 110
+130 150 100 100
+QuadStar 150 4 1
+600 660 720 750 810
+Vampire 30 4 6
+1020 1110 1200 1290 1350
+Avenger 180 1 6
+630 690 750 810 840
+endof
 
 Buccaneer
 60
-Demolition 400 5
-Barrage 230 6
-DragonStrike 810 1
-Snatch 600 1
-0
-0
+25 100
 100 100 100 100
+Demolition 500 5 1
+2340 2550 2730 2940 3120
+Barrage 410 6 1
+1830 1980 2130 2280 2430 3240
+DragonStrike 1200 1 6
+1080 1170 1260 1350 1440 2250
+Snatch 600 1 6
+750 810 870 930 990 1320
+combo
+Demolition Barrage
+combo
+DragonStrike Snatch
+endof
 
 Corsair
 60
-BattleshipCannon 380 4
-RapidFire 200 1
-Torpedo 780 1
-0
-0
-120 100 100 100
+0 0
+130 100 100 100
+BattleshipCannon 450 5 1
+600 630 690 750 780
+RapidFire 170 1 1
+120 120 120 120 120
+Torpedo 780 1 6
+720 780 840 900 960
+endof
+
+ThunderBreaker
+60
+40 100
+100 100 100 100
+LordHaveMercy 100 1 1
+1000 1000 1000 1000
+NotImplementedYet 100 1 1
+1000 1000 1000 1000
+endof
