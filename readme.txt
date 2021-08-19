@@ -44,7 +44,6 @@ Todo :
 
 ~~~~~~~~~~~~~~
 Things that need testing :	
-how bstep and bot interact, currently im assuming the first bot after bstep is a free cast, and finishes before bstep does
 attack speed on bucc skills, currently using vanilla speeds
 attack speed on Dark Impale (DrK), currently using crusher speeds
 attack speed on all Cygnus skills, some unimplemented, nightwalker is using Night Lord speeds, using Vampire vanilla
@@ -93,7 +92,7 @@ other modifiers default value is 100 (elemental charges, shadow partner, combo, 
 
 Attack1 percent1 lines1 mobcount1
 speed[0][0], ....speed[0][4]...spamming speed = speed[0][5] if present
-	this is looped until endof or combo is reading
+	this is looped until endof or combo is read
 combo
 	loops reading a skill names until endof or combo is read
 endof breaks all reading loops, ending the class reading
