@@ -15,11 +15,13 @@ Marksman
 Strafe 160 6 1
 630 690 720 780 870
 Snipe 99999 1 1
-630 690 720 780 870
+630 690 720 780 870 5000
 Pierce 750 1 6
 630 690 720 780 870
 combo
 Strafe Snipe
+combo
+Pierce Snipe
 endof
 
 WindArcher
@@ -37,7 +39,7 @@ DarkKnight
 0 0
 220 100 100 100
 DarkImpale 250 4 1
-810 870 930 990 1050
+630 690 750 810 840
 Crusher 200 3 4
 810 870 930 990 1050
 Fury 260 1 4
@@ -47,7 +49,7 @@ endof
 Hero
 60
 0 0
-250 100 100 100
+200 100 100 100
 Brandish 425 2 4
 630 690 750 810 840
 endof
@@ -60,12 +62,18 @@ Blast 350 3 1
 630 690 750 810 840
 AdvancedChargeBlow 450 1 6
 600 660 720 750 810
+HeavensHammer 1500 1 15
+2160 2340 2520 2700 2880 7000
+combo
+Blast HeavensHammer
+combo
+AdvancedChargeBlow HeavensHammer
 endof
 
 DawnWarrior
 60
 0 0
-190 120 100 100
+180 120 100 100
 IntrepidSlash 310 3 4
 630 690 750 810 840
 MoonShadow 300 1 6

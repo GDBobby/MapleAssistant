@@ -22,6 +22,14 @@ v2 SFML port
 	while not desireable, ele staff multipliers have been hardcoded in the getMultMagic function
 	corsair custom mix removed, may be reimplemented in future
 	
+	v2.0.1
+		chain lightning chain reduction removed, apparently it's not implemented
+		vanish and wind walk delay changed from 60 to 120
+		dark impale speed is changed to the same speeds as brandish
+		heaven's hammer has been implemented. I'm not 100% sure if the -450ms adjustment is included or not
+			heaven's hammer formula is assumed to use only swing multiplier, and have a 90% mastery
+		cooldowns have been added to speed slot 6, should now be easier to adjust
+	
 	
 
 Notes :
