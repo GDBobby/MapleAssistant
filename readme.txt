@@ -20,7 +20,7 @@ v2 SFML port
 	while not desireable, ele staff multipliers have been hardcoded in the getMultMagic function
 	corsair custom mix removed, may be reimplemented in future
 	
-	v2.0.1
+	v2.0.1 (thanks bigDKenergy)
 		chain lightning chain reduction removed (commented for easy reintroduction)
 		vanish and wind walk delay changed from 60 to 120
 		dark impale speed is changed to the same speeds as brandish
@@ -31,7 +31,11 @@ v2 SFML port
 		made a default case for new classes, will loop through skills and combos, but no special considerations will be made
 			str and dex will be main and sub stat respectively
 			currently a 3.6 multiplier will be used, I need an easy way to change that, most likely need to reimplement weapons.txt	
-	
+	v2.0.2 - bugfixes (thanks Arugula)
+		snipe and HH bug fixed (no longer includes attack speed outside of combo)
+		ass4th no longer includes sharp eyes
+		hero and dawn warrior charge combo no longer applies to SE
+		fixed some skills not having applied elements
 	
 
 Notes :

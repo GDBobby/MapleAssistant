@@ -197,7 +197,7 @@ endof
 ThunderBreaker
 60
 40 100
-125 100 100 100
+120 100 100 100
 LordHaveMercy 100 1 1
 1000 1000 1000 1000
 NotImplementedYet 100 1 1
