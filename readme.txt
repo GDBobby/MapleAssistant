@@ -17,18 +17,20 @@ v2 SFML port
 		weapon stat multipliers hardcoded in, ive never seen a pserver change them
 	cygnus knights added in
 	made it much easier to add in more skills, you no longer need to change code and can stay in the jobinfo.txt
-	classes can be added as well, no change in code required
-		just make sure to follow the format
 	while not desireable, ele staff multipliers have been hardcoded in the getMultMagic function
 	corsair custom mix removed, may be reimplemented in future
 	
 	v2.0.1
-		chain lightning chain reduction removed, apparently it's not implemented
+		chain lightning chain reduction removed (commented for easy reintroduction)
 		vanish and wind walk delay changed from 60 to 120
 		dark impale speed is changed to the same speeds as brandish
 		heaven's hammer has been implemented. I'm not 100% sure if the -450ms adjustment is included or not
 			heaven's hammer formula is assumed to use only swing multiplier, and have a 90% mastery
 		cooldowns have been added to speed slot 6, should now be easier to adjust
+		
+		made a default case for new classes, will loop through skills and combos, but no special considerations will be made
+			str and dex will be main and sub stat respectively
+			currently a 3.6 multiplier will be used, I need an easy way to change that, most likely need to reimplement weapons.txt	
 	
 	
 
@@ -112,4 +114,6 @@ jobinfo.txt notes
 	assassinate needs to be the first skill for Shadower, or darksight delay wont be implemented properly
 		if assassinate is the first skill in a combo, darksight delay will be applied
 		if its the second skill in a combo, darksight delay is not applied
+	ass4th needs to be in second skill slot to properly not account for sharp eyes
+	combo needs to be in the first mod slot to not apply sharp eyes
 	unfortunately, other class combos are a little more complicated and are hand coded. Only shad supports additional combos	
