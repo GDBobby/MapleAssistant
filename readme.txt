@@ -62,10 +62,8 @@ attack speed on bucc skills, currently using vanilla speeds
 attack speed on Dark Impale (DrK), currently using crusher speeds
 attack speed on all Cygnus skills, some unimplemented, nightwalker is using Night Lord speeds, using Vampire vanilla
 ThunderBreaker combos, attack order etc
-Heaven's hammer attack speed
-	I believe it's close to 2520 at some speed, then Dream has an adjustment which makes it 450ms faster, close to 2070ms
-Hero and Dawn Warrior Advanced Combo multiplier, currently assuming its 2.5 and 1.9 respectively
 I doubt it does, but need confirmation if Cygnus final attack adds to 3rd or 4th job skills
+dawn warrior and tb ele advantaged is 1.25, other classes have a 1.5 multiplier
 	
 ~~~~~~~~~~~~~~
 
@@ -115,6 +113,8 @@ endof breaks all reading loops, ending the class reading
 ~@~@~@~@~@~@~@~@~@~
 
 jobinfo.txt notes
+	currently i wouldnt recommend adding skills or classes, i need to add more functionality
+
 	assassinate needs to be the first skill for Shadower, or darksight delay wont be implemented properly
 		if assassinate is the first skill in a combo, darksight delay will be applied
 		if its the second skill in a combo, darksight delay is not applied
